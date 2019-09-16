@@ -13,7 +13,7 @@ class Parrot
             $flyPlaces = explode(',', $fly);
             $flySpecial = strlen($fly) > 20;
 
-            $flyPlan[] = $flyCode . ':' . $flyPlaces[1] . '->' . $flyPlaces[2] . ($flySpecial ? '(S)' : '');
+            $this->flyPlan[] = $flyCode . ':' . $flyPlaces[1] . '->' . $flyPlaces[2] . ($flySpecial ? '(S)' : '');
         }
     }
 }

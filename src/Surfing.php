@@ -8,13 +8,14 @@ class Surfing
 
     public function getFirstWave()
     {
-        if (count($waves) > 0) {
-            if (!isset($waves[0])) {
+        if (count($this->waves) > 0) {
+            if (!isset($this->waves[0])) {
                 $exists = false;
                 $firstWave = null;
-                foreach ($waves as $wave) {
+                foreach ($this->waves as $wave) {
                     $exists = true;
                     $firstWave = $wave;
+                    break;
                 }
 
                 if ($exists) {
@@ -22,7 +23,7 @@ class Surfing
                 }
             }
 
-            return $waves[0];
+            return $this->waves[0];
         }
 
         return -1;
